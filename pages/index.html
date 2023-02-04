@@ -1,2 +1,75 @@
-<link rel="stylesheet" href="./style.css">
-<h1>Hello Express!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOK STORE</title>
+    <style>
+      fieldset label {
+        padding: 15px;
+        margin: 15px;
+      }
+      fieldset {
+        margin: 10px;
+        padding: 10px;
+      }
+      form {
+        margin: 5px;
+      }
+      form input {
+        font-size: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BOOK STORE</h1>
+    <!-- <button><a href="http://10.103.34.94:8080/books/">List Books</a></button> -->
+    <!-- <button><a href="http://10.103.34.94:8080/magazines/">List Magazines</a></button> -->
+    <form action="/books" method="get">
+      <input type="submit" value="List All Books" />
+    </form>
+    <form action="/magazines" method="get">
+      <input type="submit" value="List All Magazines" />
+    </form>
+    <fieldset>
+      <legend>Search a Book by ISBN</legend>
+      <form action="/books/isbn" method="GET">
+        <label for="book-isbn">BOOK ISBN : </label>
+        <input type="text" name="isbn" id="book-isbn" /><br /><br />
+        <input type="submit" value="Search" id="search" />
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>Search a MAGAZINE by ISBN</legend>
+      <form action="/magazines/isbn" method="GET">
+        <label for="magazines-isbn">MAGAZINE ISBN : </label>
+        <input type="text" name="isbn" id="magazines-isbn" /><br /><br />
+        <input type="submit" value="Search" id="mag-search" />
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Search by Author's email</legend>
+      <form action="/author/publications" method="GET">
+        <label for="authors-email">Author's email : </label>
+        <input type="email" name="email" id="authors-email" /><br /><br />
+        <input type="submit" value="Search" id="mag-search" />
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Add a Book</legend>
+      <form action="/books/add" method="get">
+        <input type="submit" value="Add a Book" />
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>Add a Magazine</legend>
+      <form action="/magazines/add" method="get">
+        <input type="submit" value="Add a Magazine" />
+      </form>
+    </fieldset>
+  </body>
+</html>

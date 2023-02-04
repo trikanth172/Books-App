@@ -1,11 +1,18 @@
 {
-  "name": "node-starter",
-  "version": "0.0.0",
-  "private": true,
+  "name": "book-store",
+  "version": "1.0.0",
+  "description": "This project contains a Book Store ",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Trikanth Tipirneni",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "convert-csv-to-json": "^1.5.0",
+    "csv": "^6.2.6",
+    "csv-parse": "^5.3.4",
+    "express": "^4.18.2",
+    "package.json": "^2.0.1"
   }
 }
