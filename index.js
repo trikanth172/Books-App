@@ -10,7 +10,7 @@ app.use(express.json());
 // app.use(express.urlencoded());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3010;
+const PORT = process.env.PORT || 8080;
 const URL = 'http://10.103.34.94:8080/';
 
 app.use(express.static('public')); //* used to serve html files from public folder
